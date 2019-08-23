@@ -20,11 +20,11 @@ def apply_coupons(cart, coupons)
     item = coupon_hash[:item]
     if !hash[item].nil? && hash[item][:count] >= coupon_hash[:num]
       binding.pry
-       = {"#{item} W/COUPON" => {
+       temp = {"#{item} W/COUPON" => {
         :price => coupon_hash[:cost]/coupon_hash[:num],
         :clearance => hash[item][:clearance],
         :count => coupon_hash[:count]
-        }temp
+        }
       }
       if hash["#{item} W/COUPON"].nil?
         hash.merge!(temp)
