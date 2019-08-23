@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
       temp = {"#{item} W/COUPON" => {
         :price => coupon_hash[:cost]/coupon_hash[:num],
         :clearance => hash[item][:clearance],
-        :count => 
+        :count => coupon_hash[:count]
         }
       }
       if hash["#{item} W/COUPON"].nil?
