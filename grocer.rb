@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon_hash|
     item = coupon_hash[:item]
     if !hash[item].nil? && hash[item][:count] >= coupon_hash[:num]
-      binding.pry
+     # binding.pry
        temp = {"#{item} W/COUPON" => {
         :price => coupon_hash[:cost]/coupon_hash[:num],
         :clearance => hash[item][:clearance],
